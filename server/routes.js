@@ -8,6 +8,7 @@ const UserController     = require('./Controller/User');
 const EnderecoController = require('./Controller/Endereco');
 const MateriaController    = require('./Controller/Materia');
 const NotasController    = require('./Controller/Notas');
+const ProtocoloController    = require('./Controller/Protocolo');
 
 
 
@@ -49,5 +50,11 @@ routes.get('/notas/:id',   NotasController.show);
 routes.post('/notas',      NotasController.store);
 routes.put('/notas/:id',   NotasController.update);
 routes.delete('/notas/:id',NotasController.destroy); 
+
+routes.get('/protocolo',          ProtocoloController.index);
+routes.get('/protocolo/:id',      ProtocoloController.show);
+routes.post('/protocolo',         ProtocoloController.store);
+routes.put('/protocolo/:id',      ProtocoloController.update);
+routes.delete('/protocolo/:id',   ProtocoloController.destroy);
 
 module.exports = routes;
